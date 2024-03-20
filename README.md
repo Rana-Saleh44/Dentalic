@@ -1,2 +1,16 @@
-# Detalic
-Dentalic is a comprehensive Flutter application designed to streamline dental appointment management for both patients and dental professionals. With a sleek and intuitive interface, Dentalic simplifies the process of scheduling, tracking, and managing dental appointments, ensuring a seamless experience for all users.
+# trial1
+
+A new Flutter project.
+
+## Getting Started
+
+This project is a starting point for a Flutter application.
+
+A few resources to get you started if this is your first Flutter project:
+
+- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+
+For help getting started with Flutter development, view the
+[online documentation](https://docs.flutter.dev/), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
