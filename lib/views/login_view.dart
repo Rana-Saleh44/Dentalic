@@ -1,7 +1,9 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:trial1/components/my_button.dart';
 import 'package:trial1/components/mytext.dart';
+import 'package:trial1/views/register_veiw.dart';
 
 class login extends StatefulWidget {
   login({super.key});
@@ -86,6 +88,7 @@ class _loginState extends State<login> {
             MyButton(
               onTap: signin,
               text: "Login",
+              co: Colors.blue,
             ),
             SizedBox(
               height: 20,
@@ -133,9 +136,18 @@ class _loginState extends State<login> {
                 Text("Dont have an account ?",
                     style:
                         TextStyle(color: Colors.black, fontFamily: 'Galdeano')),
-                Text(
-                  " Sign up",
-                  style: TextStyle(color: Colors.blue, fontFamily: 'Spectral'),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => registerPage()));
+                  },
+                  child: Text(
+                    " Sign up",
+                    style:
+                        TextStyle(color: Colors.blue, fontFamily: 'Spectral'),
+                  ),
                 )
               ],
             )
