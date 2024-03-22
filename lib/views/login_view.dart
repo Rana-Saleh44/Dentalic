@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:trial1/components/my_button.dart';
 import 'package:trial1/components/mytext.dart';
+import 'package:trial1/views/doctor_views/doc_home_page.dart';
 import 'package:trial1/views/register_veiw.dart';
 
 class login extends StatefulWidget {
@@ -86,7 +87,10 @@ class _loginState extends State<login> {
               height: 25,
             ),
             MyButton(
-              onTap: signin,
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => DocHome()));
+              },
               text: "Login",
               co: Colors.blue,
             ),
