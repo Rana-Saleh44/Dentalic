@@ -24,7 +24,7 @@ class NavBar extends StatelessWidget {
               currentAccountPicture: CircleAvatar(
                 child: ClipOval(
                   child: Image.asset(
-                    "assets/denta logo.png",
+                    "assets/profile.jpg",
                     width: 90,
                     height: 90,
                     fit: BoxFit.cover,

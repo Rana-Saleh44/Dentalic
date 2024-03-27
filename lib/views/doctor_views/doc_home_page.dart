@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:trial1/components/navbar.dart';
+import 'package:trial1/views/doctor_views/doc_calender.dart';
 
 class DocHome extends StatefulWidget {
   const DocHome({Key? key});
@@ -120,18 +121,15 @@ class _DocHomeState extends State<DocHome> {
                   children: [
                     Padding(
                       padding: const EdgeInsets.symmetric(
-                          horizontal: 10.0, vertical: 40),
+                          horizontal: 10.0, vertical: 20),
                       child: Align(
                           alignment: Alignment.topLeft,
-                          child: Icon(
-                            Icons.account_circle,
-                            size: 70,
-                          )),
+                          child: _getServiceIcon(context, index)),
                     ),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 18.0),
                       child: Text(
-                        "Patient management",
+                        _getServiceText(index),
                         style: TextStyle(fontFamily: 'Galdeano', fontSize: 18),
                       ),
                     )
@@ -142,4 +140,61 @@ class _DocHomeState extends State<DocHome> {
           ),
         ),
       );
+}
+
+Widget _getServiceIcon(BuildContext context, int index) {
+  switch (index) {
+    case 0:
+      return GestureDetector(
+        onTap: () {},
+        child: Icon(Icons.assignment_ind, size: 70),
+      );
+    case 1:
+      return GestureDetector(
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => docCalender()),
+          );
+        },
+        child: Icon(Icons.event, size: 70),
+      );
+    case 2:
+      return GestureDetector(
+        onTap: () {},
+        child: Icon(Icons.description, size: 70),
+      );
+    case 3:
+      return GestureDetector(
+        onTap: () {},
+        child: Icon(Icons.video_call, size: 70),
+      );
+    case 4:
+      return GestureDetector(
+        onTap: () {},
+        child: Icon(Icons.medical_services, size: 70),
+      );
+    default:
+      return GestureDetector(
+        onTap: () {},
+        child: Icon(Icons.account_circle, size: 70),
+      );
+  }
+}
+
+String _getServiceText(int index) {
+  switch (index) {
+    case 0:
+      return "Patient Management";
+    case 1:
+      return "Appointment Scheduling";
+    case 2:
+      return "Medical Records";
+    case 3:
+      return "Telemedicine";
+    case 4:
+      return "Treatment Plans";
+    default:
+      return "Service";
+  }
 }

@@ -42,6 +42,7 @@ dependencies:
   firebase_auth: ^4.17.8
   firebase_analytics: ^10.8.9
   cloud_firestore: ^4.15.8
+  table_calendar: ^3.1.0
 
 dev_dependencies:
   flutter_test:
@@ -77,6 +78,7 @@ flutter:
     - assets/denta logo.png
     - assets/face logo.png
     - assets/apple logoo.png
+    - assets/profile.jpg
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
